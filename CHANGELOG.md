@@ -1,3 +1,10 @@
+## [1.0.5] - May 16, 2024
+
+* "Forked from the original repository, adapted for the environment:
+  sdk: '>=3.3.3 <4.0.0'." 
+* "slimy_card_plus" would be translated to "slimy card plus" .
+
+
 ## [1.0.4] - Apr 15, 2020
 
 * Updated the arrow color changing when using dark theme.

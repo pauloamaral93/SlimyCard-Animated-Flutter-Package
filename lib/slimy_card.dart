@@ -1,4 +1,4 @@
-library slimy_card;
+library slimy_card_plus;
 
 import 'package:flutter/material.dart';
 import 'package:flare_flutter/flare_actor.dart';
@@ -41,8 +41,8 @@ class SlimyCard extends StatefulWidget {
     this.topCardHeight = 300,
     this.bottomCardHeight = 150,
     this.borderRadius = 25,
-    this.topCardWidget,
-    this.bottomCardWidget,
+    required this.topCardWidget,
+    required this.bottomCardWidget,
     this.slimeEnabled = true,
   })  : assert(topCardHeight >= 150, 'Height of Top Card must be atleast 150.'),
         assert(bottomCardHeight >= 100,
@@ -56,22 +56,22 @@ class SlimyCard extends StatefulWidget {
 }
 
 class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
-  bool isSeperated;
+  late bool isSeperated;
 
-  double bottomDimension;
-  double initialBottomDimension;
-  double finalBottomDimension;
-  double gap;
-  double gapInitial;
-  double gapFinal;
-  double x;
-  double y;
-  String activeAnimation;
-  Widget topCardWidget;
-  Widget bottomCardWidget;
+  late double bottomDimension;
+  late double initialBottomDimension;
+  late double finalBottomDimension;
+  late double gap;
+  late double gapInitial;
+  late double gapFinal;
+  late double x;
+  late double y;
+  late String activeAnimation;
+  late Widget topCardWidget;
+  late Widget bottomCardWidget;
 
-  Animation<double> arrowAnimation;
-  AnimationController arrowAnimController;
+  late Animation<double> arrowAnimation;
+  late AnimationController arrowAnimController;
 
   /// `action` is the main function that triggers the process of separation of
   /// the cards and vice-versa.

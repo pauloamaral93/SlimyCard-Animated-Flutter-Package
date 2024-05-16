@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:slimy_card/slimy_card.dart';
+import 'package:slimy_card_plus/slimy_card.dart';
 
 void main() {
   //Don't worry about these codes here, as they are not relevant for this example.
