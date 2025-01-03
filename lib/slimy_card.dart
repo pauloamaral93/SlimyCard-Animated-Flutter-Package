@@ -193,7 +193,7 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
                       children: <Widget>[
                         Container(
                           child: FlareActor(
-                            'packages/slimy_card/assets/flare/bottomSlime.flr',
+                            'packages/slimy_card_plus/assets/flare/bottomSlime.flr',
                             color: widget.color
                                 .withOpacity((widget.slimeEnabled) ? 1 : 0),
                             animation: activeAnimation,
@@ -238,7 +238,7 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
                       height: widget.width / 4,
                       width: widget.width,
                       child: FlareActor(
-                        'packages/slimy_card/assets/flare/topSlime.flr',
+                        'packages/slimy_card_plus/assets/flare/topSlime.flr',
                         color: widget.color
                             .withOpacity((widget.slimeEnabled) ? 1 : 0),
                         animation: activeAnimation,
