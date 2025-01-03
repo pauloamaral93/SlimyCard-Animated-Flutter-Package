@@ -34,6 +34,8 @@ class SlimyCard extends StatefulWidget {
   final Widget topCardWidget;
   final Widget bottomCardWidget;
   final bool slimeEnabled;
+  final Function()? action;
+  final Function()? cancelAction;
 
   SlimyCard({
     this.color = const Color(0xff5858FF),
@@ -43,6 +45,8 @@ class SlimyCard extends StatefulWidget {
     this.borderRadius = 25,
     required this.topCardWidget,
     required this.bottomCardWidget,
+    this.action,
+      this.cancelAction,
     this.slimeEnabled = true,
   })  : assert(topCardHeight >= 150, 'Height of Top Card must be atleast 150.'),
         assert(bottomCardHeight >= 100,
@@ -80,12 +84,14 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
 
   void action() {
     if (isSeperated) {
+      widget?.cancelAction?.call();
       isSeperated = false;
       slimyCard.updateStatus(false);
       arrowAnimController.reverse();
       gap = gapInitial;
       bottomDimension = initialBottomDimension;
     } else {
+      widget?.action?.call();
       isSeperated = true;
       slimyCard.updateStatus(true);
       arrowAnimController.forward();
